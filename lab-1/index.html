@@ -2,22 +2,47 @@
 <html>
 <head>
 	<title>Lab - Multimedia Programming 2563 ITKMITL</title>
+	<link rel="stylesheet" type="text/css" href="https://jabont.com/jayss/jayss2.css">
 	<link rel=stylesheet href="../src/reset.css">
 	<link rel=stylesheet href="lab.css">
 	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+	<link href="https://fonts.googleapis.com/css2?family=Prompt&display=swap" rel="stylesheet">
 </head>
-<body class="paper">
+<body class="">
 	<div id="app">
-		<input type="number" v-model="number">
-		<input type="number" v-model="row">
-		<div class="space"></div>
-		<h2>สูตรคูณแม่ {{number}}</h2>
-		<h5>แม่ก่อนหน้า -> แม่ {{before_number}}</h5>
-		<h3 class="row" 
-			v-for="i in r"
-		>{{number}} x {{i}} = {{x(i)}}</h3>
-		<h3>รวม = {{sum(row)}}</h3>
-		
+		<section id="main_section" class="padding-xl-vtc">
+			<div class="cont-pd">
+				<theboxes class="top center spacing -clip t-center">
+					<box col="6"><inner class="bg-white padding-l padding-vl-hzt round shadow">
+						<h1 class="b7 h7">สูตรคูณจ้า</h1>
+						<sp class=""></sp>
+						<theboxes class="top spacing-l -clip">
+							<box col="6"><inner class="">
+								<h4 class="cl-bluegrey-6">ตัวคูณ</h4>
+								<sp class="s"></sp>
+								<input type="number" v-model="number" class="wide t-center size-l">
+								<sp class="l"></sp>
+								<h4 class="cl-bluegrey-6">จำนวนแถว</h4>
+								<sp class="s"></sp>
+								<input type="number" v-model="row" class="wide t-center size-l">
+								<sp class="l"></sp>
+								<h4>แม่ก่อนหน้านี้ คือ แม่ {{before_number}}</h4><br/><br/><br/>
+								<h2 class="cl-red-6">รวม = {{sum(row)}}</h2>
+								</inner></box>
+								<box col="6"><inner class="">
+		<!-- <div class="space"></div> -->
+								<h2 class="t-left cl-bluegrey-6">สูตรคูณแม่ {{number}}</h2>
+								<sp class=""></sp>
+								<h3 class="h9 t-left cl-brown-6" 
+								v-for="i in r"
+								>{{number}} x {{i}} = {{x(i)}}</h3>
+								
+							</inner></box>
+						</theboxes>
+					</inner></box>
+				</theboxes>
+			</div>
+		</section>
 	</div>
 
 	<script>
