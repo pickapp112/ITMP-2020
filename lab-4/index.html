@@ -75,14 +75,14 @@
 						//ด่านต่อไป
 						this.row = rand(2,6)
 						this.pick = rand(1,this.row*this.row) //แก้
-						this.h = rand(0,500)
-						this.score += 1
-						this.time += 1
+						this.h = rand(0,500)//แรนด้อมสี
+						this.score += 1//เพิ่มคะแนน
+						this.time += 1//เพิ่มเวลา
 						console.log('Correct!')
 					},
 					incorrect:function(){
-						this.score -= 2
-						this.time -= 2
+						this.score -= 2//ลดคะแนน
+						this.time -= 2//ลดเวลา
 						console.log('incorrect')
 					}
 			}
