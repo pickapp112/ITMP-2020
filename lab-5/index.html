@@ -79,22 +79,20 @@
 				turn: function(x){
 					let count = this.fruits.length
 					for(let f in this.fruits){
-						//let run = this.fruits[f].run
-						if (this.isRightArrow == 10){
-							if(this.isRightArrow == 1){
-								this.fruits[f].step = 3
-							}else{
-								this.fruits[f].step = 1
-							}
+						let run = this.fruits[f].run
+						if (run){
+							this.fruits[f].pst = this.fruits[f].pst + 1
 						}
-						//check
-						// if (this.fruits[f].pst = 11 && this.fruits[f].type = 'red'){
-						// 	this.score++;
-						// }else if(this.fruits[f].pst = 13 && this.fruits[f].type = 'yellow'){
-						// 	this.score++;
-						// console.log()
+						if (this.fruits[f].pst == 10 && this.isRightArrow == 1){
+							this.fruits[f].step = 3
+						}
 					}
-					
+					//check
+						if (this.fruits[f].pst == 11 && this.fruits[f].type == 'red'){
+							this.score++;
+						}else if (this.fruits[f].pst == 13 && this.fruits[f].type == 'yellow'){
+							this.score++;
+						}
 				}
 			}
 		})
