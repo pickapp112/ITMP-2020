@@ -74,7 +74,10 @@
 						if (run){
 							this.fruits[f].pst = this.fruits[f].pst+1
 						}
-						console.log()
+						if (this.fruits[f].pst == 10 && this.fruits.isRightArrow == 1){
+							this.fruits[f].step = 3	
+						}
+						//console.log()
 					}
 					
 				}
