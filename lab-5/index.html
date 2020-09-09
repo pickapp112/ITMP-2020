@@ -60,8 +60,7 @@
 				fruits:[
 					{id:1,type:'red',pst:5,run:true,step:1},
 					{id:2,type:'yellow',pst:2,run:true,step:1},
-					// {id:3,type:'yellow',pst:2,run:true,step:1},
-					// {id:4,type:'red',pst:1,run:true,step:1},
+					
 				]
 			},
 			methods:{
@@ -71,33 +70,36 @@
 					}else{
 						this.isRightArrow = 1
 					}
-					//console.log(this.isRightArrow)
+					console.log(this.isRightArrow)
 				}
 			},
 			computed:{}, //ประมวลผลทุกครั้งที่ค่าเปลี่ยน
 			watch:{
-				turn: function(x){
-					let count = this.fruits.length
+				turn: function(){
+					// let count = this.fruits.length
 					for(let f in this.fruits){
-						let run = this.fruits[f].run
-						if (run){
-							this.fruits[f].pst = this.fruits[f].pst + 1
-						}
-
-
-						// if (this.fruits[f].pst == 10) {
-						// 	if (this.isRightArrow == 1) {
-						// 		this.fruits[f].step = 3
-						// 	}else{
-						// 		this.fruits[f].step = 1
-						// 	}
-					}
-					//check
-						// if (this.fruits[f].pst == 11 && this.fruits[f].type == 'red'){
-						// 	this.score++;
-						// }else if (this.fruits[f].pst == 13 && this.fruits[f].type == 'yellow'){
-						// 	this.score++;
+						// let run = this.fruits[f].run
+						// if (run) {
+						// 	this.fruits[i].pst = this.fruits[i].pst + this.fruits[i].step 
 						// }
+					
+						if (this.fruits[f].pst == 10) {
+							if (this.isRightArrow == 1) {
+								this.fruits[f].step = 3
+							}else{
+								this.fruits[f].step = 1
+							}
+					}
+					// check
+						if (this.fruits[f].pst == 11 && this.fruits[f].pst == 13){
+							if (this.fruits[i].pst == this.fruits[i].type && this.fruits[i].run) {
+								this.score ++
+							}
+							else if (this.fruits[i].pst != this.fruits[i].type && this.fruits[i].run) {
+								this.play = false
+							}
+						}
+					}
 				}
 			}
 		})
