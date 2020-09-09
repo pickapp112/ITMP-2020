@@ -100,9 +100,11 @@
 							}
 							else if (this.fruits[f].pst == 11 && this.fruits[f].type == 'yellow') {
 								this.play = false
+								clearInterval(playing)
 							}
 							else if (this.fruits[f].pst == 13 && this.fruits[f].type == 'red') {
 								this.play = false
+								clearInterval(playing)
 							}
 						}
 
