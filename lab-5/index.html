@@ -78,10 +78,10 @@
 				turn: function(){
 					// let count = this.fruits.length
 					for(let f in this.fruits){
-						// let run = this.fruits[f].run
-						// if (run) {
-						// 	this.fruits[i].pst = this.fruits[i].pst + this.fruits[i].step 
-						// }
+						let run = this.fruits[f].run
+						if (run) {
+							this.fruits[f].pst = this.fruits[f].pst + this.fruits[f].step 
+						}
 					
 						if (this.fruits[f].pst == 10) {
 							if (this.isRightArrow == 1) {
