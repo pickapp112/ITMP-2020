@@ -112,6 +112,18 @@
 							this.fruits[f].run = false
 						}
 					}
+					//เพิ่ม
+					let random = rand(0,1)
+					if(random == 1){
+						newFruit = rand(0,1)
+						newFruitID = 3
+						if(newFruit == 1){
+							this.fruits.push({id:newFruitID,type:'red',pst: 0,run:true,step: 1})
+						}else{
+							this.fruits.push({id:newFruitID,type:'red',pst: 0,run:true,step: 1 })
+						}
+						newFruitID++;
+					}
 				}
 			}
 		})
