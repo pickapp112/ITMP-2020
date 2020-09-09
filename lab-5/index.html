@@ -31,7 +31,7 @@
 			</main>
 		</section>
 		<section id="canvas_footer">
-			<div v-if="play" class="btn" id="toggle" @click="swap">
+			<div v-if="play" class="btn" id="toggle" @click="change">
 				Toggle
 			</div>
 			<div v-if="!play" class="btn" id="endgame">
@@ -65,13 +65,13 @@
 				]
 			},
 			methods:{
-				swap: function(){
+				change: function(){
 					if(this.isRightArrow == 1){
 						this.isRightArrow = 0
 					}else{
 						this.isRightArrow = 1
 					}
-					console.log(this.isRightArrow)
+					//console.log(this.isRightArrow)
 				}
 			},
 			computed:{}, //ประมวลผลทุกครั้งที่ค่าเปลี่ยน
@@ -83,16 +83,21 @@
 						if (run){
 							this.fruits[f].pst = this.fruits[f].pst + 1
 						}
-						if (this.fruits[f].pst == 10 && this.isRightArrow == 1){
-							this.fruits[f].step = 3
-						}
+
+
+						// if (this.fruits[f].pst == 10) {
+						// 	if (this.isRightArrow == 1) {
+						// 		this.fruits[f].step = 3
+						// 	}else{
+						// 		this.fruits[f].step = 1
+						// 	}
 					}
 					//check
-						if (this.fruits[f].pst == 11 && this.fruits[f].type == 'red'){
-							this.score++;
-						}else if (this.fruits[f].pst == 13 && this.fruits[f].type == 'yellow'){
-							this.score++;
-						}
+						// if (this.fruits[f].pst == 11 && this.fruits[f].type == 'red'){
+						// 	this.score++;
+						// }else if (this.fruits[f].pst == 13 && this.fruits[f].type == 'yellow'){
+						// 	this.score++;
+						// }
 				}
 			}
 		})
