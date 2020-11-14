@@ -1,0 +1,63 @@
+body{
+    font-family: 'Mitr', sans-serif;
+    background-color: #fbe6e6;
+}
+.text{
+    font-weight: 200;
+}
+.about{
+    margin-left: 35%;
+}
+#circle {
+    z-index: -1;
+    position: absolute;
+    margin-left: 8%;
+    width: 500px; /* ความกว้าง */
+    height: 305px; /* ความสูง */
+    background: rgb(223, 97, 97); /* สี */
+    -moz-border-radius: 150px;
+    -webkit-border-radius: 150px;
+     border-radius: 150px;
+}
+.button {
+    border-radius: 20px;
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  font-size: 16px;
+  width: 60%;
+  height: 20%;
+  font-family: 'Mitr', sans-serif;  
+}
+
+.button1 {
+  background-color: #ffdbdb; 
+  color: black; 
+  border: 2px solid rgb(223, 97, 97);
+}
+
+.button1:hover {
+  background-color:rgb(223, 97, 97);
+  color: white;
+}
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto ;
+  padding: 10px;
+}
+.grid-item {
+  padding: 20px;
+
+}
+.grid-container2 {
+  display: grid;
+  grid-template-columns: auto auto auto auto auto;
+  padding: 10px;
+}

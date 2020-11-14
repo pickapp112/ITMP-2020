@@ -2,27 +2,36 @@
 <html>
 <head>
 	<title>The Members - ITKMITL Multimedia Programming 2563</title>
-
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Mitr:wght@300&display=swap" rel="stylesheet">
 	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 	<link rel="stylesheet" type="text/css" href="lab.css">
 </head>
 <body>
 	<div id="app">
-		About
-		<h3>Username {{person.username}}</h3>
-		<h3>Name {{person.name}}</h3>
-		<h3>Email {{person.email}}</h3>
-		<h3>Website {{person.website}}</h3>
-		<h3>Company {{person.company.name}}</h3>
-
-		<button @click="isthisgood">เขาเป็นสมาชิกกลุ่มที่ดีหรือไม่</button>
+		<div class="grid-container">
+		<div class="grid-item">
+		<h1 style="text-align: center; color:  rgb(223, 97, 97);">About</h1>
+		<div id="circle"></div>
+		<div class="about">
+			<br>
+			<h3>Username: <span class="text">{{person.username}}</span></h3>
+			<h3>Name: <span class="text">{{person.name}}</span></h3>
+			<h3>Email: <span class="text">{{person.email}}</span></h3>
+			<h3>Website: <span class="text">{{person.website}}</span></h3>
+			<h3>Company: <span class="text">{{person.company.name}}</span></h3>
+		</div></div>
+		<div class="grid-item">
+			<div class="about">
+				<br>
+		<button class="button button1" @click="isthisgood">เขาเป็นสมาชิกกลุ่มที่ดีหรือไม่</button>
 		<h2>{{yesno.answer}}</h2>
 		<img :src="yesno.image">
-		
-		Users
-		<h2 v-for="u in users" :data-id="u.id" @click="viewBio(u)">
-			<img :src="`https://picsum.photos/id/3${u.id}/300/300`" alt="">
-		{{u.username}}</h2>
+	</div></div></div>
+		<br><br>
+		<div class="grid-container2"><h2 v-for="u in users" :data-id="u.id" @click="viewBio(u)">
+			<img :src="`https://picsum.photos/id/1${u.id}/200/200`" alt="">
+		<div>{{u.username}}</div></h2></div>
 	</div>
 	
 
